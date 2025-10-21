@@ -7,6 +7,14 @@
 
 / {
     behaviors {
+        enc_vol: enc_vol {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENC_VOL";
+            #sensor-binding-cells = <0>;
+            bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
+        };
+    };
+    behaviors {
         my_behavior: my_behavior {
             compatible = "zmk,behavior-macro";
             label = "MY_BEHAVIOR";
